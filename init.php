@@ -25,11 +25,7 @@ function curl($url, $parameters)
 
 function getCallback()
 {
-    $client_id = "</*Client Id*/>";
-    $client_secret = "</*Secret key*/>";
-    $redirect_uri = "</*Redirection Url*/>";
-    $csrf_token = rand(1111111, 9999999);
-    $scopes = "r_liteprofile%20r_emailaddress";
+	global 	$client_id ,$client_secret , $redirect_uri , $csrf_token , $scopes;
 
     if (isset($_REQUEST['code'])) {
         $code = $_REQUEST['code'];
